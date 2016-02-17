@@ -31,5 +31,12 @@ module CrudRspec
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.time_zone = 'Brasilia'
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
+    config.encoding = 'utf-8'
+    I18n.enforce_available_locales = false
+
   end
 end

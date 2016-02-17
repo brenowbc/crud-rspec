@@ -30,5 +30,20 @@ describe Product do
 
 		it {should_not be_valid}	
 	end
-		
+	
+	# testes da descrição
+	describe "quando a descrição não foi informada" do
+		before { @product.description = ""}
+		it {should_not be_valid}
+	end
+
+	describe "quando a descrição é muito curta" do
+		before {@product.description = "n" * 14}
+		it {should_not be_valid }
+	end
+
+	describe "quando a descrição é muito longa" do
+		before {@product.description = "n" * 256}
+		it {should_not be_valid}
+	end
 end

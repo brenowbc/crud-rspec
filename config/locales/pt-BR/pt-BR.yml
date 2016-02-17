@@ -1,0 +1,7 @@
+  activerecord:
+    models:
+      product: Produto
+    attributes:
+      product:
+        name: Nome
+        description: Descrição
